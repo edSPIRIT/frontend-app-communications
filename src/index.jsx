@@ -49,6 +49,7 @@ initialize({
         {
           // MICROBA-1505: Remove this when we remove the flag from config
           SCHEDULE_EMAIL_SECTION: process.env.SCHEDULE_EMAIL_SECTION || null,
+          AC_INSTANCE_CONFIG_API_URL: process.env.AC_INSTANCE_CONFIG_API_URL,
         },
         'CommunicationsAppConfig',
       );
