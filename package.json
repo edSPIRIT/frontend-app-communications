@@ -16,7 +16,8 @@
     "lint:fix": "fedx-scripts eslint --fix --ext .js --ext .jsx .",
     "snapshot": "fedx-scripts jest --updateSnapshot",
     "start": "fedx-scripts webpack-dev-server --progress",
-    "test": "TZ=UTC fedx-scripts jest --coverage --passWithNoTests"
+    "test": "TZ=UTC fedx-scripts jest --coverage --passWithNoTests",
+    "dev": "PUBLIC_PATH=/communications/ MFE_CONFIG_API_URL='http://localhost:8000/api/mfe_config/v1' fedx-scripts webpack-dev-server --progress --host apps.local.edly.io"
   },
   "husky": {
     "hooks": {
@@ -33,8 +34,9 @@
     "url": "https://github.com/edx/frontend-app-communications/issues"
   },
   "dependencies": {
-    "@edx/brand": "npm:@openedx/brand-openedx@^1.2.2",
-    "@edx/frontend-component-header": "5.0.2",
+    "@edx/brand": "https://github.com/Edspirit/brand-openedx#indigo-1.4.9",
+    "@edx/frontend-component-footer": "https://github.com/Edspirit/frontend-component-footer#v14.0.11",
+    "@edx/frontend-component-header": "https://github.com/Edspirit/frontend-component-header#v5.7.3",
     "@edx/frontend-platform": "7.0.1",
     "@edx/openedx-atlas": "^0.6.0",
     "@edx/tinymce-language-selector": "1.1.0",
